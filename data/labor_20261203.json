@@ -1,0 +1,246 @@
+{
+  "people": [
+    {
+      "id": "W1",
+      "origin": "OR",
+      "skills": [
+        "machine",
+        "lead"
+      ]
+    },
+    {
+      "id": "W2",
+      "origin": "OR",
+      "skills": [
+        "machine"
+      ]
+    },
+    {
+      "id": "W3",
+      "origin": "OR",
+      "skills": [
+        "lead"
+      ]
+    },
+    {
+      "id": "W4",
+      "origin": "OR",
+      "skills": [
+        "machine",
+        "lead"
+      ]
+    }
+  ],
+  "availability": [
+    {
+      "id": "A1",
+      "person": "W1",
+      "factory": "OR",
+      "start": "08:00",
+      "end": "17:00",
+      "kind": "lend"
+    },
+    {
+      "id": "A2",
+      "person": "W1",
+      "factory": "OR",
+      "start": "13:00",
+      "end": "14:00",
+      "kind": "own"
+    },
+    {
+      "id": "A3",
+      "person": "W2",
+      "factory": "OR",
+      "start": "08:00",
+      "end": "17:00",
+      "kind": "lend"
+    },
+    {
+      "id": "A4",
+      "person": "W3",
+      "factory": "OR",
+      "start": "08:00",
+      "end": "12:00",
+      "kind": "lend"
+    },
+    {
+      "id": "A5",
+      "person": "W4",
+      "factory": "OR",
+      "start": "08:00",
+      "end": "17:00",
+      "kind": "lend"
+    }
+  ],
+  "shifts": [
+    {
+      "id": "S1",
+      "host": "FB",
+      "start": "09:00",
+      "end": "13:00",
+      "min_people": 2,
+      "required_skills": [
+        "lead",
+        "machine"
+      ]
+    },
+    {
+      "id": "S2",
+      "host": "FC",
+      "start": "11:00",
+      "end": "15:00",
+      "min_people": 2,
+      "required_skills": [
+        "lead",
+        "machine"
+      ]
+    }
+  ],
+  "terms": [
+    {
+      "id": "T1",
+      "shift": "S1",
+      "revision": 1,
+      "place": "west",
+      "cents_hour": 2900,
+      "recall_cutoff": "10:10",
+      "recall_compensation": 1200
+    },
+    {
+      "id": "T2",
+      "shift": "S1",
+      "revision": 2,
+      "place": "east",
+      "cents_hour": 3300,
+      "recall_cutoff": "10:10",
+      "recall_compensation": 1200
+    },
+    {
+      "id": "T3",
+      "shift": "S2",
+      "revision": 1,
+      "place": "north",
+      "cents_hour": 3200,
+      "recall_cutoff": "10:30",
+      "recall_compensation": 1000
+    }
+  ],
+  "consents": [
+    {
+      "id": "C1",
+      "person": "W1",
+      "terms": "T1",
+      "decision": "accept",
+      "at": "07:15"
+    },
+    {
+      "id": "C2",
+      "person": "W2",
+      "terms": "T1",
+      "decision": "accept",
+      "at": "07:30"
+    },
+    {
+      "id": "C3",
+      "person": "W2",
+      "terms": "T2",
+      "decision": "accept",
+      "at": "08:00"
+    },
+    {
+      "id": "C4",
+      "person": "W1",
+      "terms": "T2",
+      "decision": "accept",
+      "at": "08:05"
+    },
+    {
+      "id": "C5",
+      "person": "W1",
+      "terms": "T3",
+      "decision": "accept",
+      "at": "08:10"
+    },
+    {
+      "id": "C6",
+      "person": "W4",
+      "terms": "T2",
+      "decision": "accept",
+      "at": "10:01"
+    }
+  ],
+  "recalls": [
+    {
+      "id": "R1",
+      "person": "W1",
+      "shift": "S1",
+      "requested": "09:50",
+      "effective": "10:15",
+      "from_accepted": "10:04",
+      "worker_accepted": "10:14",
+      "replacement": "W4"
+    },
+    {
+      "id": "R2",
+      "person": "W2",
+      "shift": "S1",
+      "requested": "09:53",
+      "effective": "10:15",
+      "from_accepted": null,
+      "worker_accepted": null,
+      "replacement": null
+    }
+  ],
+  "attendance": [
+    {
+      "id": "E1",
+      "person": "W1",
+      "shift": "S1",
+      "reporter": "FB",
+      "start": "09:00",
+      "end": "10:17",
+      "received": "10:22"
+    },
+    {
+      "id": "E2",
+      "person": "W1",
+      "shift": "S1",
+      "reporter": "OR",
+      "start": "10:15",
+      "end": "10:50",
+      "received": "10:20"
+    },
+    {
+      "id": "E3",
+      "person": "W4",
+      "shift": "S1",
+      "reporter": "FB",
+      "start": "10:15",
+      "end": "13:00",
+      "received": "13:08"
+    }
+  ],
+  "pay_ack": [
+    {
+      "id": "M1",
+      "person": "W1",
+      "shift": "S1",
+      "reporter": "FB",
+      "coverage_start": "09:00",
+      "coverage_end": "10:15",
+      "amount": 4125,
+      "ack": "BASE-W1"
+    },
+    {
+      "id": "M2",
+      "person": "W1",
+      "shift": "S1",
+      "reporter": "FB",
+      "coverage_start": "10:15",
+      "coverage_end": "10:17",
+      "amount": 110,
+      "ack": "DIFF-W1"
+    }
+  ]
+}
